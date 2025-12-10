@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4CAF50">
+    <title>Fitness Tracker</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💪 Fitness Tracker</h1>
+            <div id="status" class="status">Offline Ready</div>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab active" data-tab="workout">Start Workout</button>
+            <button class="tab" data-tab="history">History</button>
+        </nav>
+
+        <div id="workout-tab" class="tab-content active">
+            <h2>Select Workout Type</h2>
+            <div class="workout-buttons">
+                <button class="workout-btn" data-type="upper">Upper Body</button>
+                <button class="workout-btn" data-type="lower">Lower Body</button>
+                <button class="workout-btn" data-type="core">Core</button>
+            </div>
+
+            <div id="exercise-list" class="exercise-list hidden">
+                <h3 id="workout-title"></h3>
+                <div id="exercises"></div>
+                <button id="save-workout" class="save-btn">Save Workout</button>
+            </div>
+        </div>
+
+        <div id="history-tab" class="tab-content">
+            <h2>Workout History</h2>
+            <div id="history-list"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
